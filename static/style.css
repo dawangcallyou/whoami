@@ -1,0 +1,223 @@
+/* 重置样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: #1e1e1e;
+    color: #00ff00;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* 终端容器 */
+.terminal-container {
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+}
+
+/* 终端头部 */
+.terminal-header {
+    background: #2d2d2d;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #444;
+}
+
+.window-controls {
+    display: flex;
+    gap: 6px;
+}
+
+.control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.control.close {
+    background: #ff5f57;
+}
+
+.control.minimize {
+    background: #ffbd2e;
+}
+
+.control.maximize {
+    background: #28ca42;
+}
+
+.title {
+    color: #ccc;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* 终端主体 */
+.terminal-body {
+    height: calc(100% - 40px);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* 输出区域 */
+.output-area {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.welcome-message {
+    margin-bottom: 20px;
+}
+
+.ascii-art {
+    color: #00ff00;
+    font-size: 8px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+.system-info p {
+    margin: 5px 0;
+    color: #00ff00;
+}
+
+/* 命令输出样式 */
+.command-line {
+    margin: 10px 0;
+}
+
+.prompt {
+    color: #00ff00;
+    font-weight: bold;
+}
+
+.command-text {
+    color: #ffffff;
+}
+
+.output-text {
+    color: #cccccc;
+    margin-left: 20px;
+    white-space: pre-wrap;
+}
+
+.error {
+    color: #ff4444;
+}
+
+.success {
+    color: #44ff44;
+}
+
+.info {
+    color: #4488ff;
+}
+
+.warning {
+    color: #ffff44;
+}
+
+/* 输入区域 */
+.input-area {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#command-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    flex: 1;
+    padding: 5px;
+}
+
+#command-input:focus {
+    background: rgba(0, 255, 0, 0.1);
+}
+
+/* 滚动条样式 */
+.terminal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+    background: #00ff00;
+    border-radius: 4px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb:hover {
+    background: #00cc00;
+}
+
+/* 闪烁光标效果 */
+.input-area::after {
+    content: '▋';
+    color: #00ff00;
+    animation: blink 1s infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .terminal-body {
+        padding: 10px;
+    }
+    
+    .ascii-art {
+        font-size: 6px;
+    }
+}
+
+/* 命令历史样式 */
+.command-history {
+    opacity: 0.7;
+}
+
+/* JSON输出样式 */
+.json-output {
+    color: #ffa500;
+    margin-left: 20px;
+    white-space: pre-wrap;
+    font-family: 'Courier New', monospace;
+}
+
+/* 处理来源标识 */
+.processed-by {
+    color: #888;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.processed-by.ai {
+    color: #00ffff;
+}
+
+.processed-by.backend {
+    color: #ffa500;
+}

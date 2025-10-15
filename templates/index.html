@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑客终端</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="window-controls">
+                <div class="control close"></div>
+                <div class="control minimize"></div>
+                <div class="control maximize"></div>
+            </div>
+            <div class="title">黑客终端 v1.0</div>
+        </div>
+        
+        <div class="terminal-body">
+            <div class="output-area" id="output">
+                <div class="welcome-message">
+                    <div class="ascii-art">
+  ██╗  ██╗ █████╗ ██████╗ ██╗  ██╗███████╗██████╗ 
+  ██║  ██║██╔══██╗██╔══██╗██║ ██╔╝██╔════╝██╔══██╗
+  ███████║███████║██████╔╝█████╔╝ █████╗  ██████╔╝
+  ██╔══██║██╔══██║██╔══██╗██╔═██╗ ██╔══╝  ██╔══██╗
+  ██║  ██║██║  ██║██║  ██║██║  ██╗███████╗██║  ██║
+  ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+                    </div>
+                    <div class="system-info">
+                        <p>系统初始化完成...</p>
+                        <p>输入 'help' 查看可用命令</p>
+                        <p>输入以 'ai' 开头的命令将经过AI MCP处理</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <span class="prompt">user@hack-terminal:~$ </span>
+                <input type="text" id="command-input" autocomplete="off" autofocus>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
